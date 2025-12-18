@@ -1,0 +1,104 @@
+.sidebar {
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--topbar-height));
+    background: var(--bg-card);
+    border-right: 1px solid var(--border);
+    position: fixed;
+    left: 0;
+    top: var(--topbar-height);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed);
+}
+
+.collapse-button {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+}
+
+.collapse-button:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.sidebar-nav {
+    padding: 3.5rem 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.nav-item:hover {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.nav-item.active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.nav-item.primary {
+    position: relative;
+}
+
+.nav-icon {
+    flex-shrink: 0;
+}
+
+.nav-label {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.primary-badge {
+    color: #f59e0b;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sidebar.collapsed .nav-item {
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+}
+
+.sidebar.collapsed .nav-label,
+.sidebar.collapsed .primary-badge {
+    display: none;
+}
