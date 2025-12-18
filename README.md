@@ -92,22 +92,9 @@ cp .env.example .env
 PORT=5000
 LLM_PROVIDER=ollama
 OLLAMA_API_URL=http://localhost:11434
-OLLAMA_MODEL=gpt-oss:20b
+OLLAMA_MODEL=llama3.2
 ```
 
-**For OpenAI:**
-```env
-PORT=5000
-LLM_PROVIDER=openai
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-**For Anthropic:**
-```env
-PORT=5000
-LLM_PROVIDER=anthropic
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-```
 
 5. Start the backend:
 ```powershell
